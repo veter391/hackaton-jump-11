@@ -32,17 +32,8 @@ function Chat({ initialPrompt, teacher }: Props) {
   }
 
   return (
-    <div className="msger">
-      <div className="msger-header">
-        <h2 className="msger-header-title">Asistente</h2>
-        <div className="msger-header-options">
-          <span>
-            <i className="fas fa-cog"></i>
-          </span>
-        </div>
-      </div>
-
-      <ul className="msger-chat list-reset">
+    <div className="msger"style={{background:'transparent', borderColor:'transparent', boxShadow: "none "}}>
+      <ul className="msger-chat list-reset" style={{background:'transparent', borderColor:'transparent'}}>
         {chats.map(({ message, isAnswer, sendAt }, id) => (
           <li className={`msg ${!isAnswer ? 'right' : 'left'}-msg`} key={id}>
             <div className="msg-bubble">
@@ -57,7 +48,7 @@ function Chat({ initialPrompt, teacher }: Props) {
         ))}
       </ul>
 
-      <form onChange={setMessage} onSubmit={sendForm} className="msger-form">
+      <form onChange={setMessage} onSubmit={sendForm} className="msger-form" style={{background:'transparent', borderColor:'transparent'}}>
         <Input
           disabled={isLoading}
           value={value}
@@ -65,8 +56,9 @@ function Chat({ initialPrompt, teacher }: Props) {
           name="message"
           className="msger-input"
           placeholder="Introduce tu mensaje..."
+          style={{background:'#ececec'}}
         />
-        <Button type="submit" className="msger-send-btn">
+        <Button type="submit"  className="msger-send-btn" variant='contained' style={{marginLeft: 20}}>
           Enviar
         </Button>
       </form>

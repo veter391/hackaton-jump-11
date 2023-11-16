@@ -18,7 +18,7 @@ export function Form({ onSumit }: { onSumit: (teacher: Teacher) => void }) {
   return (
     <div>
       <div style={{ flex: 1, display: 'flex', padding: "30px", flexDirection: 'column', backgroundColor: 'white', borderRadius: 24, boxShadow: "5px 10px 10px 5px rgba(0,0,0,0.1)" }}>
-        <Typography variant="h4" component="h4" fontWeight={"400"}>
+        <Typography variant="h4" component="h4" fontWeight={"400"} color={"#1976d2"}>
           Introduce tus datos
         </Typography>
         <TextField style={{ marginTop: 20, }} onChange={(e) => onInputChange(e, "name")} id="outlined-basic" label="Nombre" variant="outlined" />
