@@ -1,18 +1,18 @@
 import '../styles/chat.scss'
 import useChat from '../hooks/chat/use-chat';
-import { Teacher } from '../models/question/teacher.model';
 import { useState } from 'react';
+import { Teacher } from '../models/question/teacher.model';
 
 type Props = {
+  initialPrompt: string;
   teacher: Teacher;
-  prompt: string;
 }
 
-function Chat({ teacher, prompt }: Props) {
+function Chat({ initialPrompt, teacher }: Props) {
 
   const [value, setValue] = useState('');
 
-  const {chats, addChat} = useChat({initialChats: [{message: prompt, isAnswer: false, timestamp: new Date(Date.now())}]});
+  const {chats, addChat} = useChat({initialChats: [{message: initialPrompt, isAnswer: false, timestamp: new Date(Date.now())}]});
 
   function sendForm(e: any) {
     e.preventDefault();

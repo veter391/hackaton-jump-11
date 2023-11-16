@@ -1,16 +1,16 @@
+import { Teacher } from '../models/question/teacher.model'
 import '../styles/form.css'
-import { useForm, FieldValues } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 
-export function Form({ setViewChat }: { setViewChat : any}) {
+export function Form({ onSumit}: { onSumit : (teacher: Teacher) => void}) {
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm()
 
-  const onSubmit = (data: FieldValues ) => {
-    setViewChat( true )
-    console.log(data)
+  const onSubmit = (data: any ) => {
+    onSumit(data)
   }
 
   return (

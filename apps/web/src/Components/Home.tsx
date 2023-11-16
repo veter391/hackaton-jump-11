@@ -1,12 +1,13 @@
 import "../styles/home.css";
 import Education from "../assets/Education.png";
 import { Form } from "./Form";
-import Chat from "./Chat";
 import { useState } from 'react';
+import { Teacher } from "../models/question/teacher.model";
+import TeacherContext from "./TeacherContext";
 
 const Home = () => {
 
-  const [viewChat, setViewChat] = useState(false);
+  const [teacher, setTeacher] = useState<Teacher>();
 
   return (
     <div className="home-container">
@@ -15,7 +16,7 @@ const Home = () => {
       </div>
 
       <div className="home-content">
-        {viewChat ? <Chat name={'Jhon'} /> : <Form setViewChat={setViewChat} />}
+        {teacher ? <TeacherContext teacher={teacher} /> : <Form onSumit={setTeacher}/>}
       </div>
 
     </div>

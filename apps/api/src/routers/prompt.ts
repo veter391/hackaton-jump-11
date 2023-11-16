@@ -1,14 +1,18 @@
 import { QuestionService } from '../services/prompt/question.service';
 import express from 'express';
 import { callChatGPT } from './test';
+import { Teacher } from '@/models/prompt/teacher.model';
 const fs = require('fs');
 const path = require('path');
 
 const router = express.Router();
 const questionService = new QuestionService();
 
-router.get('/api/v1/loadContext', (req, res) => {
+router.post('/api/v1/loadContext', (req, res) => {
     const contextDir = __dirname + '/../../../../packages/contexto_gpt';
+
+    const body = req.body as Teacher;
+
     let data;
     fs.readdirSync(contextDir).forEach(file => {
         // Construct the full file path

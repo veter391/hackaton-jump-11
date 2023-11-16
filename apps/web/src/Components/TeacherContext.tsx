@@ -12,5 +12,5 @@ export default function TeacherContext({ teacher }: Props) {
 
     if (isLoading || !data) return null;
 
-    return <Chat teacher={teacher} prompt={data.answer}/>
+    return <Chat initialPrompt={data.answer} teacher={teacher}/>
 }
