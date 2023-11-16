@@ -1,4 +1,4 @@
-const API_SERVER_ULR = process.env.API_SERVER_ULR ?? "http://localhost:8080"
+const API_SERVER_ULR = process.env.API_SERVER_ULR ?? "http://localhost:8080/api/v1"
 
 export function API(path: string, method: 'GET' | 'POST' | 'PUT' | 'DELETE' = 'GET', data?: any, headers?: any, server = API_SERVER_ULR) {
     const reqHeaders = {
