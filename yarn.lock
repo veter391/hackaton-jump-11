@@ -5169,6 +5169,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jotai@npm:~2.5.1":
+  version: 2.5.1
+  resolution: "jotai@npm:2.5.1"
+  peerDependencies:
+    "@types/react": ">=17.0.0"
+    react: ">=17.0.0"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    react:
+      optional: true
+  checksum: a8168a8cf2f7a5be3870ec5ee151a2e8ac1ad635e39241c5e223cb29a678eb88cea996cfc37466a017f83b34e33c76e764a3af5aeef8ab67b5b32543d6079456
+  languageName: node
+  linkType: hard
+
 "js-tokens@npm:^3.0.0 || ^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
@@ -8751,6 +8766,7 @@ __metadata:
     autoprefixer: ^10.0.1
     eslint: ^8
     eslint-config-next: 14.0.2
+    jotai: ~2.5.1
     next: 14.0.2
     postcss: ^8
     react: ^18
