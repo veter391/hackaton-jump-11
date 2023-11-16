@@ -2198,25 +2198,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"app@workspace:packages/app":
-  version: 0.0.0-use.local
-  resolution: "app@workspace:packages/app"
-  dependencies:
-    "@tamagui/animations-react-native": latest
-    "@tamagui/colors": latest
-    "@tamagui/font-inter": latest
-    "@tamagui/lucide-icons": latest
-    "@tamagui/shorthands": latest
-    "@tamagui/themes": latest
-    "@types/react": ^18.0.27
-    "@types/react-native": ^0.71.3
-    burnt: ^0.11.0
-    jotai: 2.5.1
-    react-native-safe-area-context: 4.6.3
-    solito: ^3.0.0
-  languageName: unknown
-  linkType: soft
-
 "aproba@npm:^1.0.3 || ^2.0.0":
   version: 2.0.0
   resolution: "aproba@npm:2.0.0"
@@ -2643,20 +2624,6 @@ __metadata:
   version: 1.0.3
   resolution: "builtins@npm:1.0.3"
   checksum: 47ce94f7eee0e644969da1f1a28e5f29bd2e48b25b2bbb61164c345881086e29464ccb1fb88dbc155ea26e8b1f5fc8a923b26c8c1ed0935b67b644d410674513
-  languageName: node
-  linkType: hard
-
-"burnt@npm:^0.11.0":
-  version: 0.11.7
-  resolution: "burnt@npm:0.11.7"
-  dependencies:
-    sf-symbols-typescript: ^1.0.0
-    sonner: ^0.3.5
-  peerDependencies:
-    expo: "*"
-    react: "*"
-    react-native: "*"
-  checksum: 4b7d74e0400a2a81712ec0d11d2e41175304d95dae425fe5bbc1fa560103d1d51455a53c33f8b7196c28506c853c8b4b0c303ea04a34cbb1009079a35ae37c35
   languageName: node
   linkType: hard
 
@@ -5202,21 +5169,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jotai@npm:2.5.1":
-  version: 2.5.1
-  resolution: "jotai@npm:2.5.1"
-  peerDependencies:
-    "@types/react": ">=17.0.0"
-    react: ">=17.0.0"
-  peerDependenciesMeta:
-    "@types/react":
-      optional: true
-    react:
-      optional: true
-  checksum: a8168a8cf2f7a5be3870ec5ee151a2e8ac1ad635e39241c5e223cb29a678eb88cea996cfc37466a017f83b34e33c76e764a3af5aeef8ab67b5b32543d6079456
-  languageName: node
-  linkType: hard
-
 "js-tokens@npm:^3.0.0 || ^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
@@ -6975,16 +6927,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-safe-area-context@npm:4.6.3":
-  version: 4.6.3
-  resolution: "react-native-safe-area-context@npm:4.6.3"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-  checksum: f304d22f3df981b7d01b8a983ef5ace161b5352dfd293ef5b525071e861856ff5eda8720eacf1bc1d5153add9e53d09ce59f8cbdd20b590718863b8bb38eeebf
-  languageName: node
-  linkType: hard
-
 "react-remove-scroll-bar@npm:^2.3.4":
   version: 2.3.4
   resolution: "react-remove-scroll-bar@npm:2.3.4"
@@ -7543,13 +7485,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sf-symbols-typescript@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "sf-symbols-typescript@npm:1.0.0"
-  checksum: ab7f427b6145ba308e9ab0357e86a8b32c4bd2ed7d5bba983812483b6f8320097121a7dac1855d344cf8b5a6e45ef9b7e8f121ad640fc7821f3fd433a8280567
-  languageName: node
-  linkType: hard
-
 "shebang-command@npm:^1.2.0":
   version: 1.2.0
   resolution: "shebang-command@npm:1.2.0"
@@ -7701,13 +7636,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"solito@npm:^3.0.0":
-  version: 3.2.9
-  resolution: "solito@npm:3.2.9"
-  checksum: 79fed7c2f71d1604007cb92f901cabbae3b8af05a0835b110dfb263d6a8d5f4cbb5f02911767e5b9a73e6552898e53ebbfe401d3aa6c9a7cfdc5a5fbf4a2c3e1
-  languageName: node
-  linkType: hard
-
 "sonic-boom@npm:^0.7.5":
   version: 0.7.7
   resolution: "sonic-boom@npm:0.7.7"
@@ -7715,16 +7643,6 @@ __metadata:
     atomic-sleep: ^1.0.0
     flatstr: ^1.0.12
   checksum: b08e20dfa8d888ba32393141f96d195ab6fdecf341a736f25d9c1127cf0de8eaa4e03cde38c23cfa06c50a20ba4b5cb1b107dfc1251283b7c7a153c50f646628
-  languageName: node
-  linkType: hard
-
-"sonner@npm:^0.3.5":
-  version: 0.3.5
-  resolution: "sonner@npm:0.3.5"
-  peerDependencies:
-    react: ^18.0.0
-    react-dom: ^18.0.0
-  checksum: c0c564eddef03edb61d5a9ba4993d2a2d05a1e24e7ac9bdd4fa461e8b1fceeef69b99d4da0ffa23b3e8cbffdb660eb54327d583a9131aca34eb436a88a063691
   languageName: node
   linkType: hard
 

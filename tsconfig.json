@@ -3,7 +3,6 @@
     "strictNullChecks": true,
     "noUncheckedIndexedAccess": true,
     "paths": {
-      "app/*": ["./packages/app/*"],
       "sixedge/*": [
         "./packages/sixedge/*"
       ],
