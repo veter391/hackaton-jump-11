@@ -35,8 +35,17 @@ en la variable de entorno```OPENAI_SK``` que se encuentra declarada en el ficher
 # Datos Abiertos de Barcelona 🏙️
 "SophIA" utiliza datos directamente del OpenData Barcelona, proporcionando información actualizada y relevante sobre escuelas y asociaciones en diferentes barrios.
 
+# Futuros steps
+- Añadir gestion y persistencia de los datos del usuario para que pueda retomar conversaciones iniciadas en el pasado.
+- Alimentar con mas datos de OpenData el modelo GPT. 
+- Mejorar la interfaz del chat para poder visitar links o mostrar recursos multimedia.
+- Añadir una base de datos y sustituir el actual filesystem.
+- Proxear el puerto 8080 hacia el puerto 80 o aun mejor, 443 mediante SSL para establecer una conexión segura a través de https
+- Añadir tests unitarios y tests "end to end"
+
 # Contribuciones y Soporte 🤝
 Tus contribuciones son bienvenidas. Si encuentras un problema o tienes una sugerencia, no dudes en abrir un issue o enviar un pull request.
+
 
 ¡Gracias por apoyar a "SophIA" en su misión de ayudar a los profesores y mejorar la educación! 🎓🌍 
 
