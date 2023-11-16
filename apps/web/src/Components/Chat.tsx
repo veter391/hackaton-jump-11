@@ -23,7 +23,7 @@ function Chat({ teacher, name }: Props) {
 
   const [value, setValue] = useState('');
 
-  const {chats, addChat} = useChat({initialChats: [{message:"a", isAnswer: false, timestamp: new Date(Date.now())}]});
+  const {chats, addChat} = useChat({initialChats: [{message:"Give me the definition of insanity", isAnswer: false, timestamp: new Date(Date.now())}]});
 
   function sendForm(e: any) {
     e.preventDefault();
