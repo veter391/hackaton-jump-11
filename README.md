@@ -17,17 +17,20 @@ Para comenzar a utilizar "SophIA", sigue estos pasos:
 
 Instalación de Dependencias:
 Ejecuta el siguiente comando en la raíz del proyecto para instalar las dependencias necesarias.
-
-node```
+```
+node
 Copy code
-npm install```
+npm install
+```
 
 Iniciar la Aplicación en Producción:
 Para arrancar la aplicación en modo producción, usa:
 
-node```
+```
+node
 Copy code
-npm run start```
+npm run start
+```
 
 # Documentación y Uso 📖
 Para probar la API y familiarizarte con sus funcionalidades, accede a:
