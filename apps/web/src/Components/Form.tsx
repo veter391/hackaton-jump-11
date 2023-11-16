@@ -7,7 +7,14 @@ export function Form({ onSumit }: { onSumit: (teacher: Teacher) => void }) {
 
   const onPressGenerate = () => {
     // new object for get data to chat
-    onSumit(data)
+    //hardcode some values
+    const _data = {...data, 
+      locality: 10,
+      districtCode: 10,
+      neighborhoodCode: 10,
+      studentsAmount: 10
+    }
+    onSumit(_data)
   }
   const [data, setData] = useState<any>({teacherType: "infantil"})
 
@@ -45,8 +52,10 @@ export function Form({ onSumit }: { onSumit: (teacher: Teacher) => void }) {
             <MenuItem value={"primaria"}>Primaria</MenuItem>
             <MenuItem value={"eso"}>ESO</MenuItem>
           </Select>
-        </FormControl>
-        <TextField style={{ marginTop: 12 }} onChange={(e) => onInputChange(e, "locality")} id="outlined-basic" label="Localidad" variant="outlined" />
+        </FormControl> 
+        <TextField style={{ marginTop: 12 }} 
+        /*Hardcoded values! */
+        onChange={(e) => onInputChange(e, "locality")} id="outlined-basic" label="Localidad" variant="outlined" />
         <TextField style={{ marginTop: 12 }} onChange={(e) => onInputChange(e, "districtCode")} id="outlined-basic" label="Nº distrito" variant="outlined" />
         <TextField style={{ marginTop: 12 }} onChange={(e) => onInputChange(e, "neighborhoodCode")} id="outlined-basic" label="Barrio" variant="outlined" />
         <TextField style={{ marginTop: 12, marginBottom: 40 }} onChange={(e) => onInputChange(e, "studentsAmount")} id="outlined-basic" label="Nº estudiantes" variant="outlined" />
