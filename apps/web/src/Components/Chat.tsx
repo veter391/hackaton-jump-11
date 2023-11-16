@@ -32,8 +32,30 @@ function Chat({ initialPrompt, teacher }: Props) {
   }
 
   return (
-    <div className="msger"style={{background:'transparent', borderColor:'transparent', boxShadow: "none",  height:"80vh", overflow:'auto'}}>
-      <ul className="msger-chat list-reset" style={{background:'transparent', borderColor:'transparent'}}>
+    <div
+      className="msger"
+      style={{
+        background: 'transparent',
+        borderColor: 'transparent',
+        boxShadow: 'none',
+        height: '80vh',
+        overflow: 'auto',
+      }}
+    >
+      <ul
+        className="msger-chat list-reset"
+        style={{ background: 'transparent', borderColor: 'transparent' }}
+      >
+        <li className={`msg left-msg`}>
+          <div className="msg-bubble">
+            <div className="msg-info">
+              <div className="msg-info-name">Asistente</div>
+              {/* <div className="msg-info-time">{sendAt}</div> */}
+            </div>
+
+            <div className="msg-text">"¡Hola! Soy Sof.ia. Estoy aquí para ayudarte."</div>
+          </div>
+        </li>
         {chats.map(({ message, isAnswer, sendAt }, id) => (
           <li className={`msg ${!isAnswer ? 'right' : 'left'}-msg`} key={id}>
             <div className="msg-bubble">
@@ -48,7 +70,12 @@ function Chat({ initialPrompt, teacher }: Props) {
         ))}
       </ul>
 
-      <form onChange={setMessage} onSubmit={sendForm} className="msger-form" style={{background:'transparent', borderColor:'transparent'}}>
+      <form
+        onChange={setMessage}
+        onSubmit={sendForm}
+        className="msger-form"
+        style={{ background: 'transparent', borderColor: 'transparent' }}
+      >
         <Input
           disabled={isLoading}
           value={value}
@@ -56,9 +83,14 @@ function Chat({ initialPrompt, teacher }: Props) {
           name="message"
           className="msger-input"
           placeholder="Introduce tu mensaje..."
-          style={{background:'#ececec'}}
+          style={{ background: '#ececec' }}
         />
-        <Button type="submit"  className="msger-send-btn" variant='contained' style={{marginLeft: 20}}>
+        <Button
+          type="submit"
+          className="msger-send-btn"
+          variant="contained"
+          style={{ marginLeft: 20 }}
+        >
           Enviar
         </Button>
       </form>
