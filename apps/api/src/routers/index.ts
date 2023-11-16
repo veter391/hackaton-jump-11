@@ -1,9 +1,7 @@
-import testRouter from "./testRouter";
+import testRouter from "./pompt";
 import express from 'express';
-import { createAPI, authRouter, MongoDB, UserModel, UserSchema } from "sixedge";
 
 require('dotenv').config({ path: __dirname + '/../../../.env' });
-
 
 // const loadIndexes = async () => {
 //     try {
@@ -18,10 +16,7 @@ require('dotenv').config({ path: __dirname + '/../../../.env' });
 const router = express.Router();
 const initializeRouters = async () => {
     // PUT HERE YOUR ROUTERS
-    // const routerUsers = await createAPI("users", UserModel, UserSchema) // Creates auto api for users
     router.use('/', testRouter);
-    // router.use('/', routerUsers);
-    // authRouter(router)
 }
 
 // loadIndexes();
