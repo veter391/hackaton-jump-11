@@ -796,7 +796,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/animations-react-native@latest, @tamagui/animations-react-native@npm:1.76.0":
+"@tamagui/animations-react-native@npm:1.76.0, @tamagui/animations-react-native@npm:latest":
   version: 1.76.0
   resolution: "@tamagui/animations-react-native@npm:1.76.0"
   dependencies:
@@ -917,7 +917,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/colors@latest, @tamagui/colors@npm:1.76.0":
+"@tamagui/colors@npm:1.76.0, @tamagui/colors@npm:latest":
   version: 1.76.0
   resolution: "@tamagui/colors@npm:1.76.0"
   checksum: a3fc23f84b857f5ecff138d243572877e35626c9e7b6228f5e15f7f4bc8f9431de6a80f0eb43b9142815ae38f5bac90579a98db8e8dcd75f0483ca2bbc1d56d2
@@ -1059,7 +1059,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/font-inter@latest":
+"@tamagui/font-inter@npm:latest":
   version: 1.76.0
   resolution: "@tamagui/font-inter@npm:1.76.0"
   dependencies:
@@ -1239,7 +1239,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/lucide-icons@latest":
+"@tamagui/lucide-icons@npm:latest":
   version: 1.76.0
   resolution: "@tamagui/lucide-icons@npm:1.76.0"
   dependencies:
@@ -1511,7 +1511,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/shorthands@latest":
+"@tamagui/shorthands@npm:latest":
   version: 1.76.0
   resolution: "@tamagui/shorthands@npm:1.76.0"
   checksum: 602b9a7be697b8968e75c1b74f11ad7882b5ec48416155e100b1b3829b8d9d8a79d25a2019ea7de7c4ea5db9ee30a0eed6ab73ce1d3c5d880599adfc34a250c0
@@ -1628,7 +1628,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/themes@latest":
+"@tamagui/themes@npm:latest":
   version: 1.76.0
   resolution: "@tamagui/themes@npm:1.76.0"
   dependencies:
@@ -7495,7 +7495,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-tamagui@latest:
+"tamagui@npm:latest":
   version: 1.76.0
   resolution: "tamagui@npm:1.76.0"
   dependencies:
@@ -8204,6 +8204,7 @@ tamagui@latest:
     postcss: ^8.4.31
     react: ^18.2.0
     react-dom: ^18.2.0
+    react-hook-form: ^7.48.2
     react-icons: ^4.12.0
     react-scroll: ^1.9.0
     sass: ^1.69.5
