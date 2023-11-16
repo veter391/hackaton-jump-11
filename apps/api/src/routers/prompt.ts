@@ -5,7 +5,7 @@ import { callChatGPT } from './test';
 const router = express.Router();
 const questionService = new QuestionService();
 
-router.get('/api/v1/ask', async (req, res) => {
+router.post('/api/v1/ask', async (req, res) => {
     res.json(await questionService.ask(req.body));
 });
 
