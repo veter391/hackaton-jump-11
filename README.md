@@ -8,6 +8,10 @@ Accede a la beta pública en: ```http://sophia.sixedge.es:8080/```
 
 **Backend NodeJS y ExpressJS:** Servidor eficiente y escalable.
 
+**Reverse proxy:** Proxy inverso para redirigir el trafico y hacer load balancing haciendo uso de redbird.
+
+**Big Data:** Datos cooked y consumidos a traves de ficheros que se encuentran en ```packages/contexto_gpt/*```
+
 **Base de Datos con FileSystem:** Almacenamiento seguro y accesible con el propio filesystem del servidor.
 
 Protocolo REST API: Comunicación efectiva entre cliente y servidor.
