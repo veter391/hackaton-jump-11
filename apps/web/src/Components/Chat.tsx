@@ -1,29 +1,18 @@
 import '../styles/chat.scss'
 import useChat from '../hooks/chat/use-chat';
-import { Teacher, TeacherType } from '../models/question/teacher.model';
+import { Teacher } from '../models/question/teacher.model';
 import { useState } from 'react';
 
-const TEACHER = {
-  name: 'string',
-  lastName: 'string',
-  teacherType: TeacherType.ESO,
-  locality: 'string',
-  districtCode: 'string',
-  neighborhoodCode: 'string',
-  studentsAmount: 1,
-  averageStudentsAge: 1,
-}
-
 type Props = {
-  teacher?: Teacher;
-  name: string;
+  teacher: Teacher;
+  prompt: string;
 }
 
-function Chat({ teacher, name }: Props) {
+function Chat({ teacher, prompt }: Props) {
 
   const [value, setValue] = useState('');
 
-  const {chats, addChat} = useChat({initialChats: [{message:"Give me the definition of insanity", isAnswer: false, timestamp: new Date(Date.now())}]});
+  const {chats, addChat} = useChat({initialChats: [{message: prompt, isAnswer: false, timestamp: new Date(Date.now())}]});
 
   function sendForm(e: any) {
     e.preventDefault();
@@ -55,7 +44,7 @@ function Chat({ teacher, name }: Props) {
               <li key={i} className={`msg ${isAnswer ? 'left' : 'right'}-msg`}>
                 <div className="msg-bubble">
                   <div className="msg-info">
-                    <div className="msg-info-name">{isAnswer ? 'Assistant' : name}</div>
+                    <div className="msg-info-name">{isAnswer ? 'Assistant' : teacher.name}</div>
                     <div className="msg-info-time">{sendAt}</div>
                   </div>
     
