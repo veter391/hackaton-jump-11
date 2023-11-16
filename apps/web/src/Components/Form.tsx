@@ -1,5 +1,5 @@
 import '../styles/form.css'
-import { useForm } from 'react-hook-form'
+import { useForm, FieldValues } from 'react-hook-form'
 
 export function Form({ setViewChat }: { setViewChat : any}) {
   const {
@@ -8,7 +8,7 @@ export function Form({ setViewChat }: { setViewChat : any}) {
     handleSubmit,
   } = useForm()
 
-  const onSubmit = (data : object) => {
+  const onSubmit = (data: FieldValues ) => {
     setViewChat( true )
     console.log(data)
   }

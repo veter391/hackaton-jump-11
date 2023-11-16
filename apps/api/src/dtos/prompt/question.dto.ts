@@ -6,6 +6,5 @@ type Chat = {
 }
 
 export interface QuestionDTO {
-    teacher: Teacher;
     messages: Chat[];
 }

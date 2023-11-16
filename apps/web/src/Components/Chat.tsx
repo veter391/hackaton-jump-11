@@ -23,7 +23,7 @@ function Chat({ teacher, name }: Props) {
 
   const [value, setValue] = useState('');
 
-  const {chats, addChat} = useChat({teacher: teacher ?? TEACHER});
+  const {chats, addChat} = useChat({initialChats: [{message:"Give me the definition of insanity", isAnswer: false, timestamp: new Date(Date.now())}]});
 
   function sendForm(e: any) {
     e.preventDefault();
@@ -59,7 +59,7 @@ function Chat({ teacher, name }: Props) {
               <li className={`msg ${!isAnswer ? 'right' : 'left'}-msg`} key={id}>
                 <div className="msg-bubble">
                   <div className="msg-info">
-                    <div className="msg-info-name">{isAnswer ? 'Assistant' : 'Me'}</div>
+                    <div className="msg-info-name">{isAnswer ? 'Assistant' : name}</div>
                     <div className="msg-info-time">{sendAt}</div>
                   </div>
     

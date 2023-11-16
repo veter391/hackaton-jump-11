@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useQuestion from "../query/use-question";
-import { Teacher } from "../../models/question/teacher.model";
 import { format } from 'date-fns'
 
 type Chat = {
@@ -11,7 +10,7 @@ type Chat = {
 }
 
 type Props = {
-    teacher: Teacher;
+    initialChats: [Chat];
 }
 
 export default function useChat({ teacher }: Props) {
@@ -19,23 +18,33 @@ export default function useChat({ teacher }: Props) {
 
     const { isPending, mutate } = useQuestion();
 
+    useEffect(() => {
+        // Initial mutate
+        sendChats(initialChats);
+    }, []);
+
     const addChat = (chat: Omit<Chat, 'timestamp'>) => {
         const _chats = chats;
         const newChat = {
             ...chat,
             timestamp: new Date(Date.now())
         } satisfies Chat;
+        // Update state
         setChats([..._chats, newChat]);
 
+        // Call mutate
+        sendChats([..._chats, newChat]);
+    }
+
+    const sendChats = (_chats: Chat[]) => {
         mutate({
-            teacher,
             messages: _chats.map(({ timestamp: _, message, isAnswer }) => ({
                 content: message ?? '',
                 role: isAnswer ? 'assistant' : 'user'
             }))
         }, {
             onSuccess: ({answer}) => {
-                setChats([..._chats, newChat, { message: answer, isAnswer: true, timestamp: new Date(Date.now()) }])
+                setChats([..._chats, { message: answer, isAnswer: true, timestamp: new Date(Date.now()) }].filter(c => c))
             }
         });
     }
@@ -43,6 +52,6 @@ export default function useChat({ teacher }: Props) {
     return {
         addChat,
         isLoading: isPending,
-        chats: chats.map(({ timestamp, ...data}) => ({sendAt: format(timestamp, 'HH:mm'), ...data})),
+        chats: chats.filter((_,i) => i >= 1).map(({ timestamp, ...data}) => ({sendAt: format(timestamp, 'HH:mm'), ...data})),
     }
 }

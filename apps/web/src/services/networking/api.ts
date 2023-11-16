@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-types */
-const API_SERVER_URL = import.meta.env.VITE_API_SERVER_URL ?? "http://localhost:8080"
+const API_SERVER_URL = import.meta.env.VITE_API_SERVER_URL ?? "http://localhost:8080/api/v1"
 
 export function API<T extends Record<string, unknown>>(path: string, method: 'GET' | 'POST' | 'PUT' | 'DELETE' = 'GET', data?: Object, headers?: Record<string, string>, server = API_SERVER_URL) {
     const reqHeaders = {
