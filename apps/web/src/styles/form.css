@@ -1,0 +1,41 @@
+.section {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.form {
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  height: 35px;
+}
+
+.input:focus {
+  border-bottom: 1px solid #000;
+}
+
+.button {
+  outline: none;
+  border: none;
+  height: 35px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.active {
+  border-bottom: 1px solid #000;
+}

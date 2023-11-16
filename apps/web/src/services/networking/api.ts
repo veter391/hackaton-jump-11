@@ -1,12 +1,13 @@
-const API_SERVER_ULR = process.env.API_SERVER_ULR ?? "http://localhost:8080"
+/* eslint-disable @typescript-eslint/ban-types */
+const API_SERVER_URL = import.meta.env.VITE_API_SERVER_URL ?? "http://localhost:8080"
 
-export function API(path: string, method: 'GET' | 'POST' | 'PUT' | 'DELETE' = 'GET', data?: any, headers?: any, server = API_SERVER_ULR) {
+export function API<T extends Record<string, unknown>>(path: string, method: 'GET' | 'POST' | 'PUT' | 'DELETE' = 'GET', data?: Object, headers?: Record<string, string>, server = API_SERVER_URL) {
     const reqHeaders = {
         'Content-Type': 'application/json',
         ...headers
     };
 
-    let requestOptions: any = {
+    let requestOptions: {method: string, headers: Record<string, string>, body?: string} = {
         method,
         headers: reqHeaders,
     };
@@ -31,10 +32,10 @@ export function API(path: string, method: 'GET' | 'POST' | 'PUT' | 'DELETE' = 'G
             }
             return response
         })
-        .then(response => response.json())
+        .then(response => response.json() as unknown as T)
 }
 
-export function UploadFile(path: string, formData: FormData, server = API_SERVER_ULR): Promise<any> {
+export function UploadFile(path: string, formData: FormData, server = API_SERVER_URL): Promise<unknown> {
     return fetch(server + path, {
         method: 'POST',
         body: formData

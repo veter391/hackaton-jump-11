@@ -5,7 +5,7 @@ var customResolverApi = function (host, url, req) {
     }
 };
 var defaultResolver = function (host, url, req) {
-    return 'http://localhost:3002'
+    return 'http://localhost:5173'
 }
 
 // assign high priority

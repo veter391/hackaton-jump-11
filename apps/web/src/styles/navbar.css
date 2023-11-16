@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fcfcfc;
+  }
+   
+   .Navbar{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #1a85ff;
+    color: white;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    letter-spacing: 4px;
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,.4);
+  }
+  
+  .nav-elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%
+  }
+  
+  .nav-elements ul{
+    display: flex;
+    height: 80px;
+    width: 500px;
+    list-style: none;
+    justify-content: center;
+  }
+  
+  .nav_link {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    height: 100%;
+    width: 10rem;
+  }
+  
+  .nav_link:hover{
+    background-color:rgb(129, 189, 245);
+    color: white;
+  }
+  
+  .nav_lng img {
+    object-fit: contain;
+    transition: 500ms;
+  }
+  
+  .uknav img {
+    height: 43px;
+  } 
+  
+  .spainnav img {
+    height: 50px;
+  }
+  
+  .nav_lng:hover {
+    transform: scale(1.15);
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+  
+  .nav-elements ul li:not(:last-child) {
+    margin-right: 30px;
+  }
+  
+  .nav_item{
+    width: 40%;
+  }
+  
+  .nav-elements ul {
+    font-size: x-large;
+    font-weight: 400;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .nav-elements ul a.active {
+    color: #ffffff;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .nav-elements ul a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-elements ul li {
+      margin-right: 30px;
+    }
+  }
+  
+  @media (max-width: 668px) and (min-width:375px){
+    .menu-icon {
+      display: block;
+      cursor: pointer;
+      margin-left: 90%;  
+    }
+
+
+    .nav-elements {
+      position: absolute;  
+      opacity: 90%;
+      right: 0;
+      top: 70px;
+      background-color:#ff881a;
+      width: 0px;
+      height: calc(100vh - 70px);
+      transition: all 0.3s ease-in;
+      overflow: hidden;
+    }
+  
+    .nav-elements.active {
+      width: 50%;
+    }
+  
+    .nav-elements ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .nav-elements ul li {
+      margin-right: 10px;
+      margin-top: 22px;
+    }
+  }

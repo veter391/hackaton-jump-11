@@ -1,0 +1,15 @@
+.home-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.home-elements {
+  display: flex;
+  justify-content: center;
+}
+
+#Education {
+  width: 30rem;
+}
