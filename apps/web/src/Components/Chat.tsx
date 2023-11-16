@@ -23,7 +23,7 @@ function Chat({ teacher, name }: Props) {
 
   const [value, setValue] = useState('');
 
-  const {chats, addChat} = useChat({teacher: teacher ?? TEACHER});
+  const {chats, addChat} = useChat({initialChats: [{message:"a", isAnswer: false, timestamp: new Date(Date.now())}, {isAnswer:true,message: "a", timestamp: new Date(Date.now())}]});
 
   function sendForm(e: any) {
     e.preventDefault();
@@ -52,7 +52,7 @@ function Chat({ teacher, name }: Props) {
         <ul className="msger-chat list-reset">
           {
             chats.map(({ message, isAnswer, sendAt }) => (
-              <li className={`msg ${isAnswer ? 'right' : 'left'}-msg`}>
+              <li className={`msg ${isAnswer ? 'left' : 'right'}-msg`}>
                 <div className="msg-bubble">
                   <div className="msg-info">
                     <div className="msg-info-name">{isAnswer ? 'Assistant' : 'Me'}</div>
