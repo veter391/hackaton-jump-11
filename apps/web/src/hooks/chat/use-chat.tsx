@@ -13,7 +13,7 @@ type Props = {
     initialChats: [Chat];
 }
 
-export default function useChat({ teacher }: Props) {
+export default function useChat({ initialChats }: Props) {
     const [chats, setChats] = useState<Chat[]>([{ message: 'Hi, welcome to Sophia! Go ahead and send me a message. 😄', isAnswer: true, timestamp: new Date(Date.now()) }]);
 
     const { isPending, mutate } = useQuestion();
