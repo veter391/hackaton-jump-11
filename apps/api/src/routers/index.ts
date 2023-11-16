@@ -1,4 +1,4 @@
-import testRouter from "./pompt";
+import testRouter from "./prompt";
 import express from 'express';
 
 require('dotenv').config({ path: __dirname + '/../../../.env' });
