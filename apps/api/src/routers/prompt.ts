@@ -27,7 +27,17 @@ router.post('/api/v1/loadContext', (req, res) => {
             data = {...data, [file.split(".")[0]]: content}
         }
     });
-    res.json(data)
+    res.json(
+      questionService.createContext(body, {
+        equipments: data['equipaments'],
+        neighborhoodAssociations: data['associacionsbcnx'],
+        schoolsList: data['escoles_infantils'],
+        reglamentaryStudies: data['estudis_reglamentaris'],
+        averageRent: data['renda'],
+        socialServices: data['serveisobcnx'],
+        studentsAmount: data['numero_estudiantes_barrio'],
+      })
+    )
 })
 
 router.post('/api/v1/ask', async (req, res) => {
