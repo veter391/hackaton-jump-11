@@ -1,12 +1,12 @@
 # Ayudante de Profesores "SophIA" 📚👩‍🏫
 
-Bienvenidos al repositorio de "SophIA", nuestro innovador ayudante de profesores, diseñado para facilitar la búsqueda de información sobre escuelas y asociaciones en diferentes barrios. Este proyecto es una combinación de tecnologías de vanguardia en el desarrollo web y la inteligencia artificial.
----
-
+Bienvenidos al repositorio de "SophIA", nuestro innovador ayudante de profesores, diseñado para facilitar la búsqueda de información sobre escuelas y asociaciones en diferentes barrios. Este proyecto es una combinación de tecnologías de vanguardia en el desarrollo web y la inteligencia artificial. Diseñado para complementar contenidos educativos más interactivos y facilitar la inclusión en las escuelas de los diferentes barrios de Barcelona. Aportando contenidos educativos y a la vez accediendo por OpenData a datos del barrio donde imparte clases el profesor :  población, renta, asociaciones, servicios sociales, equipamientos deportivos ,etc
 ## Características Principales 🌟
-### Frontend React: Interfaz de usuario intuitiva y responsiva.
-### Backend NodeJS y ExpressJS: Servidor eficiente y escalable.
-### Base de Datos con FileSystem: Almacenamiento seguro y accesible.
+**Frontend React:** Interfaz de usuario intuitiva y responsiva.
+
+**Backend NodeJS y ExpressJS:** Servidor eficiente y escalable.
+
+**Base de Datos con FileSystem:** Almacenamiento seguro y accesible.
 
 Protocolo REST API: Comunicación efectiva entre cliente y servidor.
 Infraestructura y Despliegue en Producción: Alojado en un VPS en OVH para un rendimiento óptimo.
