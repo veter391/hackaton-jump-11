@@ -33,7 +33,7 @@ function Chat({ initialPrompt, teacher }: Props) {
   return (
     <div className="msger">
       <div className="msger-header">
-        <h2 className="msger-header-title">Assistant</h2>
+        <h2 className="msger-header-title">Asistente</h2>
         <div className="msger-header-options">
           <span>
             <i className="fas fa-cog"></i>
@@ -46,7 +46,7 @@ function Chat({ initialPrompt, teacher }: Props) {
           <li className={`msg ${!isAnswer ? 'right' : 'left'}-msg`} key={id}>
             <div className="msg-bubble">
               <div className="msg-info">
-                <div className="msg-info-name">{isAnswer ? 'Assistant' : teacher.name}</div>
+                <div className="msg-info-name">{isAnswer ? 'Asistente' : teacher.name}</div>
                 <div className="msg-info-time">{sendAt}</div>
               </div>
 
@@ -66,7 +66,7 @@ function Chat({ initialPrompt, teacher }: Props) {
           placeholder="Enter your message..."
         />
         <button type="submit" className="msger-send-btn">
-          Send
+          Enviar
         </button>
       </form>
     </div>
