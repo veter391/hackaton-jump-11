@@ -1,5 +1,5 @@
 import '../styles/form.css'
-import { useForm } from 'react-hook-form'
+import { useForm, FieldValues } from 'react-hook-form'
 
 export function Form() {
   const {
@@ -8,7 +8,7 @@ export function Form() {
     handleSubmit,
   } = useForm()
 
-  const onSubmit = (data) => {
+  const onSubmit = (data: FieldValues) => {
     console.log(data)
   }
 
