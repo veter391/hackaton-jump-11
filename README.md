@@ -1,6 +1,6 @@
-# Ayudante de Profesores "SophIA" 📚👩‍🏫
+# ¡Explora "SophIA": Tu nueva compañera en la aventura educativa!👩‍🏫
 
-Bienvenidos al repositorio de "SophIA", nuestro innovador ayudante de profesores, diseñado para facilitar la búsqueda de información sobre escuelas y asociaciones en diferentes barrios. Este proyecto es una combinación de tecnologías de vanguardia en el desarrollo web y la inteligencia artificial. Diseñado para complementar contenidos educativos más interactivos y facilitar la inclusión en las escuelas de los diferentes barrios de Barcelona. Aportando contenidos educativos y a la vez accediendo por OpenData a datos del barrio donde imparte clases el profesor :  población, renta, asociaciones, servicios sociales, equipamientos deportivos ,etc
+¡Dale la bienvenida a la era de la información con estilo! Con "SophIA", te sumerges en un viaje de descubrimiento sin precedentes. Esta herramienta de vanguardia está diseñada meticulosamente para enriquecer tus métodos de enseñanza, aportándote un acceso instantáneo a un universo de datos sobre la vida escolar y comunitaria en los diversos barrios de Barcelona. Con "SophIA", no solo obtendrás contenidos educativos interactivos y atractivos, sino que también conectarás con la realidad local de manera única, accediendo a través de OpenData a información vital como la población, renta, asociaciones, servicios sociales y mucho más. ¡Prepárate para transformar la educación con "SophIA" y llevar tu experiencia docente al siguiente nivel!
 ## Características Principales 🌟
 **Frontend React:** Interfaz de usuario intuitiva y responsiva.
 
