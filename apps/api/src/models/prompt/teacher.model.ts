@@ -1,6 +1,6 @@
 import { TeacherType } from "./teacher-type.enum";
 
-export interface Ask {
+export interface Teacher {
     name: string;
     lastName: string;
     teacherType: TeacherType;
