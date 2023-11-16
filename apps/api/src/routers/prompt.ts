@@ -14,8 +14,6 @@ router.post('/api/v1/loadContext', (req, res) => {
     const body = req.body as Teacher;
     const nbcode = +body.districtCode;
 
-    console.log({body})
-
     let data;
     fs.readdirSync(contextDir).forEach(file => {
         // Construct the full file path
@@ -29,8 +27,8 @@ router.post('/api/v1/loadContext', (req, res) => {
             data = {...data, [file.split(".")[0]]: content}
         }
     });
-    res.json(
-      questionService.createContext(body, {
+    res.json({
+      answer: questionService.createContext(body, {
         equipments: data['equipaments'],
         neighborhoodAssociations: data['associacionsbcnx'],
         schoolsList: data['escoles_infantils'],
@@ -38,11 +36,13 @@ router.post('/api/v1/loadContext', (req, res) => {
         averageRent: data['renda'],
         socialServices: data['serveisobcnx'],
         studentsAmount: data['numero_estudiantes_barrio'],
-      })
-    )
+      }),
+    })
 })
 
 router.post('/api/v1/ask', async (req, res) => {
+    //res.json({ answer: JSON.stringify(req.body) })
+    //res.json({answer: new Date(Date.now()).toString()});
     res.json(await questionService.ask(req.body));
 });
 
