@@ -1059,7 +1059,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/font-inter@npm:latest":
+"@tamagui/font-inter@latest":
   version: 1.76.0
   resolution: "@tamagui/font-inter@npm:1.76.0"
   dependencies:
@@ -1239,7 +1239,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/lucide-icons@npm:latest":
+"@tamagui/lucide-icons@latest":
   version: 1.76.0
   resolution: "@tamagui/lucide-icons@npm:1.76.0"
   dependencies:
@@ -1511,7 +1511,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/shorthands@npm:latest":
+"@tamagui/shorthands@latest":
   version: 1.76.0
   resolution: "@tamagui/shorthands@npm:1.76.0"
   checksum: 602b9a7be697b8968e75c1b74f11ad7882b5ec48416155e100b1b3829b8d9d8a79d25a2019ea7de7c4ea5db9ee30a0eed6ab73ce1d3c5d880599adfc34a250c0
@@ -1628,7 +1628,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/themes@npm:latest":
+"@tamagui/themes@latest":
   version: 1.76.0
   resolution: "@tamagui/themes@npm:1.76.0"
   dependencies:
@@ -4219,6 +4219,7 @@ __metadata:
     eslint: ^8.21.0
     node-gyp: ^9.3.1
     prettier: ^2.7.1
+    react-hook-form: ^7.48.2
     turbo: ^1.10.3
     typescript: ~5.2.2
   languageName: unknown
@@ -4660,9 +4661,9 @@ __metadata:
   linkType: hard
 
 "ignore@npm:^5.2.0, ignore@npm:^5.2.4":
-  version: 5.2.4
-  resolution: "ignore@npm:5.2.4"
-  checksum: 3d4c309c6006e2621659311783eaea7ebcd41fe4ca1d78c91c473157ad6666a57a2df790fe0d07a12300d9aac2888204d7be8d59f9aaf665b1c7fcdb432517ef
+  version: 5.3.0
+  resolution: "ignore@npm:5.3.0"
+  checksum: 2736da6621f14ced652785cb05d86301a66d70248597537176612bd0c8630893564bd5f6421f8806b09e8472e75c591ef01672ab8059c07c6eb2c09cefe04bf9
   languageName: node
   linkType: hard
 
@@ -6527,6 +6528,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-hook-form@npm:^7.48.2":
+  version: 7.48.2
+  resolution: "react-hook-form@npm:7.48.2"
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18
+  checksum: 39652d08f78f16e5234049ceeb794d8bcd4d146772aca99c6db8c5aea8926cd4a230d02098886a441074deefbc24ffcb5ed57bc7cb0009d950115f5b3e627f12
+  languageName: node
+  linkType: hard
+
 "react-icons@npm:^4.12.0":
   version: 4.12.0
   resolution: "react-icons@npm:4.12.0"
@@ -7485,7 +7495,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tamagui@npm:latest":
+tamagui@latest:
   version: 1.76.0
   resolution: "tamagui@npm:1.76.0"
   dependencies:

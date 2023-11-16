@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": ["../../../src/components/NextLink.tsx"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,kBAA6B,+BAKzB;AAFG,MAAM,WAAY,CAAC,UAEtB,4CAAC,YAAAA,SAAA,EAAkB,GAAG,OAAO,WAAW,gBAAgB,MAAM,aAAa,KAAK;",
+  "names": ["NextInternalLink"]
+}

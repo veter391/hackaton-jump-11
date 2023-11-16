@@ -46,7 +46,7 @@ function Chat({ teacher, name }: Props) {
       <div className="msger">
         <div className="msger-header">
           <h2 className="msger-header-title">
-            Asistant
+            Assistant
           </h2>
           <div className="msger-header-options">
             <span><i className="fas fa-cog"></i></span>

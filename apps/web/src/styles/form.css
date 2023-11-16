@@ -5,7 +5,7 @@
 }
 
 .form {
-  min-width: 500px;
+  min-width: 400px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -15,18 +15,22 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-.input {
+.form > h1 {
+  color: #1a85ff;
+}
+
+.form__input {
   outline: none;
   border: none;
   border-bottom: 1px solid #ccc;
   height: 35px;
 }
 
-.input:focus {
+.form__input:focus {
   border-bottom: 1px solid #000;
 }
 
-.button {
+.form__button {
   outline: none;
   border: none;
   height: 35px;
@@ -36,6 +40,16 @@
   border-radius: 5px;
 }
 
+.form__button:hover {
+  background-color: #1a85ff;
+}
+
 .active {
   border-bottom: 1px solid #000;
+}
+
+p {
+  justify-content: center;
+  align-items: center;
+  font-size: small;
 }

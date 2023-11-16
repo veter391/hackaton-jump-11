@@ -2,5 +2,8 @@ import { Teacher } from "./teacher.model";
 
 export interface Question {
     teacher: Teacher;
-    messages: { message: string, isAnswer: boolean }[];
+    messages: {
+        content: string;
+        role: 'assistant' | 'user';
+    }[];
 }

@@ -1,0 +1,1 @@
+{"version":3,"file":"getDefaultLayout.d.ts","sourceRoot":"","sources":["../../src/components/getDefaultLayout.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,MAAM,OAAO,CAAC;AAE1B,MAAM,MAAM,SAAS,CAAC,KAAK,GAAG,GAAG,IAAI,CACnC,IAAI,EAAE,KAAK,CAAC,SAAS,EACrB,SAAS,EAAE,KAAK,EAChB,IAAI,EAAE,MAAM,KACT,KAAK,CAAC,YAAY,CAAA;AAEvB,eAAO,MAAM,gBAAgB,EAAE,SAoB9B,CAAA"}
