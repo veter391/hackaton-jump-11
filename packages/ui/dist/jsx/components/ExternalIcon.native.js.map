@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": ["../../../src/components/ExternalIcon.tsx"],
+  "mappings": "AAEO,SAAS,aAAa,OAAO;AAClC,SACE,CAAC;AAAA,IACC,OAAO,EAAE,SAAS,IAAI;AAAA,IACtB,MAAM;AAAA,IACN,OAAO;AAAA,IACP,QAAQ;AAAA,IACR,MAAM;AAAA,GAEN,CAAC;AAAA,IACC,EAAE;AAAA,IACF,KAAK;AAAA,EACP,EACF,EAXC;AAaL;",
+  "names": []
+}

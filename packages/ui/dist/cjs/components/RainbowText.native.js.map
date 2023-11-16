@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": ["../../../src/components/RainbowText.tsx"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAEQ;AAFR,MAAM,cAAc,CAAC,EAAC,SAAQ,MAEtB,4CAAC,UAAK,WAAU,uCAAuC,UAAS;AAIxE,IAAO,sBAAQ;",
+  "names": []
+}
