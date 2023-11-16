@@ -10,15 +10,13 @@ const Home = () => {
   const [teacher, setTeacher] = useState<Teacher>();
 
   return (
-    <div className="home-container">
-      <div className="home-elements">
+    <div style={{ padding: "30px", display: 'flex', flexDirection: 'row', flex: 1 }}>
+      <div style={{ flex: 1 }}>
         <img src={Education} alt="Edu" id="Education" />{" "}
       </div>
-
-      <div className="home-content">
-        {teacher ? <TeacherContext teacher={teacher} /> : <Form onSumit={setTeacher}/>}
+      <div style={{ flex: 1}}>
+        {teacher ? <TeacherContext teacher={teacher} /> : <Form onSumit={setTeacher} />}
       </div>
-
     </div>
   );
 };

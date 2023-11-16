@@ -1,116 +1,35 @@
 import { Teacher } from '../models/question/teacher.model'
 import '../styles/form.css'
-import { useForm } from 'react-hook-form'
+import { Button, TextField, Typography } from '@mui/material';
+import { useState } from 'react';
 
-export function Form({ onSumit}: { onSumit : (teacher: Teacher) => void}) {
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-  } = useForm()
+export function Form({ onSumit }: { onSumit: (teacher: Teacher) => void }) {
 
-  const onSubmit = (data : any) => {
-    const { name, lastName, teacherType, locality, districtCode, neighborhoodCode, studentsAmount, averageStudentsAge } = data;
+  const onPressGenerate = () => {
     // new object for get data to chat
-    const newData = {
-      name,
-      lastName,
-      teacherType,
-      locality,
-      districtCode,
-      neighborhoodCode,
-      studentsAmount,
-      averageStudentsAge
-    }
-    console.log(data, newData)
     onSumit(data)
+  }
+  const [data, setData] = useState<any>({})
+
+  const onInputChange = (e: any, key: string) => {
+    setData({ ...data, [key]: e.target.value })
   }
 
   return (
-    <section>
-      <form className="form" onSubmit={handleSubmit(onSubmit)}>
-        <h2> Introduce tus datos </h2>
-        {/* <input className="form__input" type="text" name="classTopic" placeholder="Apellido de profesor" />
-        <input className="form__input" type="text" name="classTopic" placeholder="Tipo de Profesor" />
-        <input className="form__input" type="text" name="classTopic" placeholder="Asignatura que imparte" /> */}
-        
-        <input className="form__input" type="text" placeholder="Nombre del profesor"
-          {...register('name', {
-            required: true,
-            pattern: /^[a-zA-ZÁ-ú\s]+$/i,
-          })}
-        />
-
-        <input className="form__input" type="text" placeholder="Apellido del profesor"
-          {...register('lastName', {
-            required: true,
-            pattern: /^[a-zA-ZÁ-ú\s]+$/i,
-          })}
-        />
-
-        <input className="form__input" type="text" placeholder="Tipo de profesor"
-          {...register('teacherType', {
-            // required: true,
-            pattern: /^[a-zA-ZÁ-ú\s]+$/i,
-          })}
-        />
-
-        <input className="form__input" type="text" placeholder="Barrio"
-          {...register('locality', {
-            required: true,
-            pattern: /^[a-zA-ZÁ-ú\s]+$/i,
-          })}
-        />
-
-        <input className="form__input" type="text" placeholder="Codigo de area"
-          {...register('districtCode', {
-            // required: true,
-            pattern: /^[a-zA-ZÁ-ú\s]+$/i,
-          })}
-        />
-
-
-        <input className="form__input" type="text" placeholder="neighborhoodCode"
-          {...register('neighborhoodCode', {
-            // required: true,
-            pattern: /^[a-zA-ZÁ-ú\s]+$/i,
-          })}
-        />
-
-        <input className="form__input" type="text" placeholder="Cantidad de alumnos"
-          {...register('studentsAmount', {
-            // required: true,
-            pattern: /^[a-zA-ZÁ-ú\s]+$/i,
-          })}
-        />
-
-        <input className="form__input" type="text" placeholder="edad de alumnos"
-          {...register('averageStudentsAge', {
-            // required: true,
-            pattern: /^[a-zA-ZÁ-ú\s]+$/i,
-          })}
-        />
-
-        {/* <input
-          className="form__input" type="text" placeholder="Nombre del colegio"
-          {...register('school', {
-            required: true,
-            pattern: /^[a-zA-ZÁ-ú\s]+$/i,
-          })}
-        /> */}
-
-        {errors.school?.type === 'required' && <p style={{color: 'red'}}> Se require nombre del colegio</p>}
-        {errors.school?.type === 'pattern' && <p style={{color: 'red'}}> El nombre no es válido</p>}
-        {errors.teacher?.type === 'required' && <p style={{color: 'red'}}> Se require nombre del profesor</p>}
-        {errors.teacher?.type === 'pattern' && <p style={{color: 'red'}}> El nombre no es válido</p>}
-        {/* <input className="form__input" type="text" name="barrio" placeholder="Barrio" />
-        <input className="form__input" type="text" name="barrio" placeholder="Codigo del barrio" />
-        <input className="form__input" type="text" name="classTopic" placeholder="Asignatura que imparte"/>
-        <input className="form__input" type="text" name="numberStudents" placeholder="Edad de alumnos"/>
-        <input className="form__input" type="text" name="numberStudents" placeholder="Numero de alumnos" /> */}
-
-        <button className="form__button">continuar</button>
-      </form>
-    </section>
+    <div>
+      <div style={{ flex: 1, display: 'flex', padding: "30px", flexDirection: 'column', backgroundColor: 'white', borderRadius: 24, boxShadow: "5px 10px 10px 5px rgba(0,0,0,0.1)" }}>
+        <Typography variant="h4" component="h4" fontWeight={"400"}>
+          Introduce tus datos
+        </Typography>
+        <TextField style={{ marginTop: 20, }} onChange={(e) => onInputChange(e, "name")} id="outlined-basic" label="Nombre" variant="outlined" />
+        <TextField style={{ marginTop: 12 }} onChange={(e) => onInputChange(e, "teacherType")} id="outlined-basic" label="Tipo" variant="outlined" />
+        <TextField style={{ marginTop: 12 }} onChange={(e) => onInputChange(e, "locality")} id="outlined-basic" label="Localidad" variant="outlined" />
+        <TextField style={{ marginTop: 12 }} onChange={(e) => onInputChange(e, "districtCode")} id="outlined-basic" label="Nº distrito" variant="outlined" />
+        <TextField style={{ marginTop: 12 }} onChange={(e) => onInputChange(e, "neighborhoodCode")} id="outlined-basic" label="Barrio" variant="outlined" />
+        <TextField style={{ marginTop: 12 }} onChange={(e) => onInputChange(e, "studentsAmount")} id="outlined-basic" label="Nº estudiantes" variant="outlined" />
+        <TextField style={{ marginTop: 12, marginBottom: 40 }} onChange={(e) => onInputChange(e, "averageStudentsAge")} id="outlined-basic" label="Edad media estudiantes" variant="outlined" />
+        <Button onClick={onPressGenerate} variant="contained">Generar asistente</Button>
+      </div>
+    </div>
   )
 }

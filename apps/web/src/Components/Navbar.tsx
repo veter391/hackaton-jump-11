@@ -16,9 +16,6 @@ const Navbar = () => {
               <div className="menu-icon" onClick={handleShowNavbar}>
                   <FaBars />
               </div>
-              <h1 className='title'>
-                Sophia Assistant
-              </h1>
               {/* <div className={`nav-elements nav-item  ${showNavbar && 'active'}`}>
                   <ul>
                       <li>
