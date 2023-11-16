@@ -2,6 +2,7 @@ import '../styles/chat.scss'
 import useChat from '../hooks/chat/use-chat'
 import { useState } from 'react'
 import { Teacher } from '../models/question/teacher.model'
+import { Button, Input } from '@mui/material'
 
 type Props = {
   initialPrompt: string
@@ -57,17 +58,17 @@ function Chat({ initialPrompt, teacher }: Props) {
       </ul>
 
       <form onChange={setMessage} onSubmit={sendForm} className="msger-form">
-        <input
+        <Input
           disabled={isLoading}
           value={value}
           type="text"
           name="message"
           className="msger-input"
-          placeholder="Enter your message..."
+          placeholder="Introduce tu mensaje..."
         />
-        <button type="submit" className="msger-send-btn">
+        <Button type="submit" className="msger-send-btn">
           Enviar
-        </button>
+        </Button>
       </form>
     </div>
   )
