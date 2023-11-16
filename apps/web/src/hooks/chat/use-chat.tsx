@@ -29,7 +29,10 @@ export default function useChat({ teacher }: Props) {
 
         mutate({
             teacher,
-            messages: _chats.map(({ timestamp: _, ...data }) => data)
+            messages: _chats.map(({ timestamp: _, message, isAnswer }) => ({
+                content: message ?? '',
+                role: isAnswer ? 'assistant' : 'user'
+            }))
         }, {
             onSuccess: ({answer}) => {
                 setChats([..._chats, newChat, { message: answer, isAnswer: true, timestamp: new Date(Date.now()) }])
