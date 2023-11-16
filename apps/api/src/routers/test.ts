@@ -2,7 +2,7 @@ import OpenAI from 'openai';
 require('dotenv').config()
 
 const openai = new OpenAI({
-    apiKey: process.env?.OPENAI_SK
+    apiKey: process.env?.OPENAI_SK ?? ''
 });
 
 export async function callChatGPT() {
