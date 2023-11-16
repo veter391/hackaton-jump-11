@@ -7,7 +7,6 @@ export function Form({ onSumit }: { onSumit: (teacher: Teacher) => void }) {
 
   const onPressGenerate = () => {
     // new object for get data to chat
-    console.log('DEV: ', data)
     onSumit(data)
   }
   const [data, setData] = useState<any>({})
