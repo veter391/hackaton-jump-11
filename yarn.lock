@@ -4702,23 +4702,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fullstack-starter@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "fullstack-starter@workspace:."
-  dependencies:
-    "@babel/runtime": ^7.18.9
-    "@manypkg/cli": ^0.19.1
-    check-dependency-version-consistency: ^3.0.3
-    dotenv: ~16.3.1
-    eslint: ^8.21.0
-    node-gyp: ^9.3.1
-    prettier: ^2.7.1
-    react-hook-form: ^7.48.2
-    turbo: ^1.10.3
-    typescript: ~5.2.2
-  languageName: unknown
-  linkType: soft
-
 "function-bind@npm:^1.1.2":
   version: 1.1.2
   resolution: "function-bind@npm:1.1.2"
@@ -4963,6 +4946,23 @@ __metadata:
   checksum: 2be7c03b833cb6d6dd9aa668f1be3ceeb75d5fd968c92745de323183f79e7ab22aa934e16c595c74632a2533bc53ef08a9408b10a42dccc35c642b083fa53171
   languageName: node
   linkType: hard
+
+"hackaton-jump2digital@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "hackaton-jump2digital@workspace:."
+  dependencies:
+    "@babel/runtime": ^7.18.9
+    "@manypkg/cli": ^0.19.1
+    check-dependency-version-consistency: ^3.0.3
+    dotenv: ~16.3.1
+    eslint: ^8.21.0
+    node-gyp: ^9.3.1
+    prettier: ^2.7.1
+    react-hook-form: ^7.48.2
+    turbo: ^1.10.3
+    typescript: ~5.2.2
+  languageName: unknown
+  linkType: soft
 
 "handle-thing@npm:^2.0.0":
   version: 2.0.1

@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/components/NextLink.tsx"],
-  "mappings": "AAAA,OAAO,sBAAsB;AAGtB,MAAM,WAAY,CAAC,UAEtB,CAAC,qBAAqB,OAAO,WAAW,gBAAgB,MAAM,aAAa,KAAK;",
-  "names": []
-}

@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/components/DegradatedText.tsx"],
-  "mappings": "AAAA,MAAM,iBAAiB,CAAC,EAAC,SAAQ,MAEzB,CAAC,KAAK,UAAU,sDAAsD,SAAS,EAA9E;AAIT,IAAO,yBAAQ;",
-  "names": []
-}
