@@ -6,14 +6,12 @@
   "private": true,
   "workspaces": [
     "apps/*",
-    "packages/*",
-    "tests"
+    "packages/*"
   ],
   "scripts": {
     "dev": "turbo run dev --parallel",
     "watch": "yarn workspaces foreach -pi run watch",
     "build": "yarn workspaces foreach --all --exclude next-app run build",
-    "run:tests": "yarn workspace tests run test",
     "web": "yarn build && cd apps/next && yarn next",
     "web:extract": "DISABLE_EXTRACTION=false yarn workspace next-app dev",
     "web:prod": "yarn workspace next-app build",
