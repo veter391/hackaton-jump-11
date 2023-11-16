@@ -12,6 +12,7 @@ router.post('/api/v1/loadContext', (req, res) => {
     const contextDir = __dirname + '/../../../../packages/contexto_gpt';
 
     const body = req.body as Teacher;
+    const nbcode = +'1';
 
     let data;
     fs.readdirSync(contextDir).forEach(file => {
@@ -22,7 +23,7 @@ router.post('/api/v1/loadContext', (req, res) => {
             // Process the file
             //console.log(file); //Name
             console.log('READING: ', contextDir+"/"+file)
-            const content = JSON.parse(fs.readFileSync(contextDir+"/"+file, "utf8"))
+            const content = JSON.parse(fs.readFileSync(contextDir+"/"+file, "utf8"))[nbcode]
             data = {...data, [file.split(".")[0]]: content}
         }
     });
