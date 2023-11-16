@@ -40,6 +40,6 @@ export default function useChat({ teacher }: Props) {
     return {
         addChat,
         isLoading: isPending,
-        chats: chats.map(({ timestamp, ...data}) => ({sendAt: format(timestamp, 'hh:mm'), ...data})),
+        chats: chats.map(({ timestamp, ...data}) => ({sendAt: format(timestamp, 'HH:mm'), ...data})),
     }
 }
