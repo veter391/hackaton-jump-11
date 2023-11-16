@@ -1,4 +1,4 @@
-import { QuestionService } from '@/services/prompt/question.service';
+import { QuestionService } from '../services/prompt/question.service';
 import express from 'express';
 
 const router = express.Router();
