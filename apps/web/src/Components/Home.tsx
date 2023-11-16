@@ -23,7 +23,7 @@ const Home = () => {
         <img style={{ alignSelf: 'center' }} src={Education} alt="Edu" id="Education" />
         <div style={{ marginTop: 30, }}>
           <Typography fontWeight={"300"}>
-            ¡Bienvenido a <strong>"Sof.ia"</strong>, tu asistente virtual basado en <strong>IA</strong> para <strong>docentes!</strong> Completa nuestro formulario sencillo para <strong>revolucionar tu enseñanza</strong>. Accede a herramientas <strong>inteligentes y personalizadas que facilitarán tu labor docente</strong>. Emprende el camino hacia una educación más <strong>interactiva</strong>, <strong>eficiente</strong> e <strong>inclusiva</strong>. ¡Únete a nosotros y experimenta la <strong>innovación</strong> en la enseñanza!
+            ¡Bienvenido a <strong>"Soph.ia"</strong>, tu asistente virtual basado en <strong>IA</strong> para <strong>docentes!</strong> Completa nuestro formulario sencillo para <strong>revolucionar tu enseñanza</strong>. Accede a herramientas <strong>inteligentes y personalizadas que facilitarán tu labor docente</strong>. Emprende el camino hacia una educación más <strong>interactiva</strong>, <strong>eficiente</strong> e <strong>inclusiva</strong>. ¡Únete a nosotros y experimenta la <strong>innovación</strong> en la enseñanza!
           </Typography>
         </div>
       </div>
