@@ -9,7 +9,7 @@ export function Form({ onSumit }: { onSumit: (teacher: Teacher) => void }) {
     // new object for get data to chat
     onSumit(data)
   }
-  const [data, setData] = useState<any>({})
+  const [data, setData] = useState<any>({teacherType: "infantil"})
 
   const onInputChange = (e: any, key: string) => {
     const val = e.target.value
