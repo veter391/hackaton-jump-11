@@ -53,7 +53,7 @@ function Chat({ initialPrompt, teacher }: Props) {
               {/* <div className="msg-info-time">{sendAt}</div> */}
             </div>
 
-            <div className="msg-text">"¡Hola! Soy Sof.ia. Estoy aquí para ayudarte."</div>
+            <div className="msg-text">¡Hola! Soy Sof.ia. Estoy aquí para ayudarte.</div>
           </div>
         </li>
         {chats.map(({ message, isAnswer, sendAt }, id) => (

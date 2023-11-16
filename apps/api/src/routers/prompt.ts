@@ -42,8 +42,8 @@ router.post('/api/v1/loadContext', (req, res) => {
 
 router.post('/api/v1/ask', async (req, res) => {
     //res.json({ answer: JSON.stringify(req.body) })
-    //res.json({answer: new Date(Date.now()).toString()});
-    res.json(await questionService.ask(req.body));
+    res.json({answer: new Date(Date.now()).toString()});
+    //res.json(await questionService.ask(req.body));
 });
 
 router.get('/api/v1/test', async (req, res) => {
