@@ -1,5 +1,8 @@
-import { TeacherType } from "./teacher-type.enum";
 
+export enum TeacherType {
+    ESO = 'ESO',
+    PRIMARIA = 'Primaria',
+}
 export interface Teacher {
     name: string;
     lastName: string;
