@@ -1,19 +1,40 @@
-import { useState } from 'react';
 import '../styles/chat.scss'
+import useChat from '../hooks/chat/use-chat';
+import { Teacher, TeacherType } from '../models/question/teacher.model';
+import { useState } from 'react';
 
-function Chat({ name } : { name : string }) {
+const TEACHER = {
+  name: 'string',
+  lastName: 'string',
+  teacherType: TeacherType.ESO,
+  locality: 'string',
+  districtCode: 'string',
+  neighborhoodCode: 'string',
+  studentsAmount: 1,
+  averageStudentsAge: 1,
+}
 
-  // const [value, setValue] = useState('');
+type Props = {
+  teacher?: Teacher;
+  name: string;
+}
+
+function Chat({ teacher, name }: Props) {
+
+  const [value, setValue] = useState('');
+
+  const {chats, addChat} = useChat({teacher: teacher ?? TEACHER});
 
   function sendForm(e: any) {
     e.preventDefault();
-    console.log('sended')
+    addChat({message: value, isAnswer: false})
+    setValue('');
   }
 
   function setMessage(e: any) {
     e.preventDefault();
     // e.target.message.value
-    console.log('sended')
+    setValue(e.target.value);
   }
 
 
@@ -29,6 +50,22 @@ function Chat({ name } : { name : string }) {
         </div>
 
         <ul className="msger-chat list-reset">
+          {
+            chats.map(({ message, isAnswer, sendAt }) => (
+              <li className={`msg ${isAnswer ? 'right' : 'left'}-msg`}>
+                <div className="msg-bubble">
+                  <div className="msg-info">
+                    <div className="msg-info-name">{isAnswer ? 'Assistant' : 'Me'}</div>
+                    <div className="msg-info-time">{sendAt}</div>
+                  </div>
+    
+                  <div className="msg-text">
+                    {message}
+                  </div>
+                </div>
+              </li>
+            ))
+          }
           <li className="msg left-msg">
             <div className="msg-bubble">
               <div className="msg-info">
@@ -57,7 +94,7 @@ function Chat({ name } : { name : string }) {
         </ul>
 
         <form onChange={setMessage} onSubmit={sendForm} className="msger-form">
-          <input type="text" name='message' className="msger-input" placeholder="Enter your message..." />
+          <input value={value} type="text" name='message' className="msger-input" placeholder="Enter your message..." />
           <button type="submit" className="msger-send-btn">Send</button>
         </form>
       </div>
