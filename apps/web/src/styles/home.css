@@ -9,6 +9,10 @@
   display: flex;
   justify-content: center;
 }
+.home-content {
+  width: 600px;
+  border: 1px solid red;
+}
 
 #Education {
   width: 30rem;

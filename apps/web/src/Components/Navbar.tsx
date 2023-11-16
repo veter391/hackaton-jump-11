@@ -1,7 +1,7 @@
 import {useState}from 'react'; 
 import '../styles/navbar.css';
 import {FaBars} from 'react-icons/fa6';
-import {Link} from 'react-scroll';
+// import {Link} from 'react-scroll';
 
 const Navbar = () => {
 
@@ -16,7 +16,10 @@ const Navbar = () => {
               <div className="menu-icon" onClick={handleShowNavbar}>
                   <FaBars />
               </div>
-              <div className={`nav-elements nav-item  ${showNavbar && 'active'}`}>
+              <h1 className='title'>
+                Sophia Assistant
+              </h1>
+              {/* <div className={`nav-elements nav-item  ${showNavbar && 'active'}`}>
                   <ul>
                       <li>
                           <Link to="" className='nav_link'> Inicio </Link>
@@ -28,7 +31,7 @@ const Navbar = () => {
                           <Link to="" className='nav_link'> Info </Link>
                       </li>
                   </ul>
-              </div>
+              </div> */}
           </nav>
       
     </div>

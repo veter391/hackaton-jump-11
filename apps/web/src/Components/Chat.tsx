@@ -27,7 +27,7 @@ function Chat({ teacher, name }: Props) {
 
   function sendForm(e: any) {
     e.preventDefault();
-    
+
     if (value.length > 0) {
       addChat({message: value, isAnswer: false})
     }
@@ -55,8 +55,8 @@ function Chat({ teacher, name }: Props) {
 
         <ul className="msger-chat list-reset">
           {
-            chats.map(({ message, isAnswer, sendAt }) => (
-              <li className={`msg ${!isAnswer ? 'right' : 'left'}-msg`}>
+            chats.map(({ message, isAnswer, sendAt }, id) => (
+              <li className={`msg ${!isAnswer ? 'right' : 'left'}-msg`} key={id}>
                 <div className="msg-bubble">
                   <div className="msg-info">
                     <div className="msg-info-name">{isAnswer ? 'Assistant' : 'Me'}</div>
