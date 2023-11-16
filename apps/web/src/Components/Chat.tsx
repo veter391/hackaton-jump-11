@@ -9,9 +9,7 @@ type Props = {
 }
 
 function Chat({ initialPrompt, teacher }: Props) {
-
   const [value, setValue] = useState('');
-
   const {chats, addChat} = useChat({initialChats: [{message: initialPrompt, isAnswer: false, timestamp: new Date(Date.now())}]});
 
   function sendForm(e: any) {
