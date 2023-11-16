@@ -5,6 +5,8 @@ export interface Teacher {
     lastName: string;
     teacherType: TeacherType;
     locality: string;
+    districtCode: string;
+    neighborhoodCode: string;
     studentsAmount: number;
     averageStudentsAge: number;
 }
