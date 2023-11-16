@@ -32,7 +32,7 @@ function Chat({ initialPrompt, teacher }: Props) {
   }
 
   return (
-    <div className="msger"style={{background:'transparent', borderColor:'transparent', boxShadow: "none "}}>
+    <div className="msger"style={{background:'transparent', borderColor:'transparent', boxShadow: "none",  height:"80vh", overflow:'auto'}}>
       <ul className="msger-chat list-reset" style={{background:'transparent', borderColor:'transparent'}}>
         {chats.map(({ message, isAnswer, sendAt }, id) => (
           <li className={`msg ${!isAnswer ? 'right' : 'left'}-msg`} key={id}>
