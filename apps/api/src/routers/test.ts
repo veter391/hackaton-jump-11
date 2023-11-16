@@ -5,10 +5,10 @@ const openai = new OpenAI({
     apiKey: process.env?.OPENAI_SK ?? ''
 });
 
-export async function callChatGPT() {
+export async function callChatGPT(prevMessages) {
     const stream = await openai.beta.chat.completions.stream({
         model: 'gpt-4',
-        messages: [{ role: 'user', content: 'I want you to say: "Jowo this is a test"' }],
+        messages: prevMessages,
         stream: true,
     });
 

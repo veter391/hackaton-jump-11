@@ -11,9 +11,17 @@ router.post('/api/v1/ask', async (req, res) => {
 
 router.get('/api/v1/test', async (req, res) => {
     try {
-        const { choices } = await callChatGPT();
-        const lastMessage = choices[0].message;
-        res.send(lastMessage)
+        const initialMessages = [{ role: 'user', content: 'I want you to say: "Jowo this is a test"' }]
+        let messages = [...initialMessages]
+        const res1 = await callChatGPT(messages);
+        console.log("RESULT1", res1)
+        const newMessage = res1.choices[0].message;
+        messages = messages.concat(newMessage)
+        const newQuestion = { role: 'user', content: 'Now i want you say the same but name is not "Jowo" its "JAWA"' }
+        messages = messages.concat(newQuestion);
+        const res2 = await callChatGPT(messages);
+        const response = res2.choices[0].message
+        res.send(response)
     } catch (e) {
         console.log("error: ", e)
         res.status(501).send("GPT error")
