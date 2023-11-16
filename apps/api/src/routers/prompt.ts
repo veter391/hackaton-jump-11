@@ -14,6 +14,8 @@ router.post('/api/v1/loadContext', (req, res) => {
     const body = req.body as Teacher;
     const nbcode = +body.districtCode;
 
+    console.log({body})
+
     let data;
     fs.readdirSync(contextDir).forEach(file => {
         // Construct the full file path

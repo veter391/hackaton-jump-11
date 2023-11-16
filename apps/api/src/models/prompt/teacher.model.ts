@@ -5,7 +5,6 @@ export enum TeacherType {
 }
 export interface Teacher {
     name: string;
-    lastName: string;
     teacherType: TeacherType;
     locality: string;
     districtCode: string;
