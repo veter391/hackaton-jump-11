@@ -28,7 +28,7 @@ export function Form({ onSumit }: { onSumit: (teacher: Teacher) => void }) {
         <TextField style={{ marginTop: 12 }} onChange={(e) => onInputChange(e, "neighborhoodCode")} id="outlined-basic" label="Barrio" variant="outlined" />
         <TextField style={{ marginTop: 12 }} onChange={(e) => onInputChange(e, "studentsAmount")} id="outlined-basic" label="Nº estudiantes" variant="outlined" />
         <TextField style={{ marginTop: 12, marginBottom: 40 }} onChange={(e) => onInputChange(e, "averageStudentsAge")} id="outlined-basic" label="Edad media estudiantes" variant="outlined" />
-        <Button onClick={onPressGenerate} variant="contained">Generar asistente</Button>
+        <Button onClick={onPressGenerate} variant="contained" style={{ height: 42}}>Generar asistente</Button>
       </div>
     </div>
   )
