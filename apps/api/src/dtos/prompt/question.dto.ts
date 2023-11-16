@@ -1,8 +1,8 @@
 import { Teacher } from "@/models/prompt/teacher.model";
 
 type Chat = {
-    message: string;
-    isAnswer: boolean;
+    content: string;
+    role: 'assistant' | 'user';
 }
 
 export interface QuestionDTO {
