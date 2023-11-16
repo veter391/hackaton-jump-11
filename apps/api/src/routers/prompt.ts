@@ -12,7 +12,7 @@ router.post('/api/v1/loadContext', (req, res) => {
     const contextDir = __dirname + '/../../../../packages/contexto_gpt';
 
     const body = req.body as Teacher;
-    const nbcode = +'1';
+    const nbcode = +body.districtCode;
 
     let data;
     fs.readdirSync(contextDir).forEach(file => {
