@@ -18,5 +18,6 @@ export async function callChatGPT(prevMessages) {
     }
 
     const chatCompletion = await stream.finalChatCompletion();
-    return chatCompletion; // {id: "…", choices: […], …}
+    // @ts-ignore
+    return chatCompletion?.choices[0].message.content ?? ''; // {id: "…", choices: […], …}
 }
