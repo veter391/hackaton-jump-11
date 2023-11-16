@@ -1,7 +1,5 @@
 {
-  "name": "fullstack-starter",
-  "repository": "https://github.com/gerarddomenechcobos1998/fullstack-starter.git",
-  "author": "Gerard <gerard.domenech.cobos@gmail.com>",
+  "name": "hackaton-jump2digital",
   "license": "MIT",
   "private": true,
   "workspaces": [
