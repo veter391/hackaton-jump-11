@@ -10,7 +10,7 @@ type Chat = {
 }
 
 type Props = {
-    initialChats: [Chat, Chat];
+    initialChats: [Chat];
 }
 
 export default function useChat({ initialChats }: Props) {
@@ -52,6 +52,6 @@ export default function useChat({ initialChats }: Props) {
     return {
         addChat,
         isLoading: isPending,
-        chats: chats.filter((_,i) => i >= 2).map(({ timestamp, ...data}) => ({sendAt: format(timestamp, 'HH:mm'), ...data})),
+        chats: chats.filter((_,i) => i >= 1).map(({ timestamp, ...data}) => ({sendAt: format(timestamp, 'HH:mm'), ...data})),
     }
 }
